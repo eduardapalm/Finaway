@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+   <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+   <script defer src="index.js"></script>
+   <title>Finaway</title>
+</head>
+
+<body>
+   <header>
+      <img class="pig-img" src="./assets/pig-icon.png" alt="Cofre de Porquinho">
+      <h1>Finaway</h1>
+   </header>
+   <section class="no-registers">
+      <h1>Você ainda não tem registros!</h1>
+      <h2>Clique no botão abaixo para registrar novos ganhos ou despesas.</h2>
+      <button class="newRegister">Novo Registro</button>
+   </section>
+   <div class="modal hidden">
+      <div class="modal-choices content">
+         <h1>Que tipo de valor você deseja registrar?</h1>
+         <button class="green-choice">Ganhos</button>
+         <button class="red-choice">Despesas</button>
+      </div>
+      <div class="modal-form content hidden">
+         <h1 class="form-title">Ganhos</h1>
+         <hr>
+         <p class="origin">Origem do Ganho:</p>
+         <input class="inputs entrie-origin" type="text">
+         <p>Valor:</p>
+         <input class="inputs entrie-value" type="number">
+         <p>Data:</p>
+         <input class="inputs entrie-date" type="date">
+
+         <div class="buttons">
+            <button class="cancel">Cancelar</button>
+            <button class="register">Registrar</button>
+         </div>
+
+         <p class="warning hidden">Por favor, preencha todos os campos!</p>
+      </div>
+   </div>
+   <section class="registers-board hidden">
+      <h1>Registros</h1>
+      <hr class="title-hr">
+      <div class="board-content">
+         <section class="histories">
+            <section class="gains-history">
+               <h2 class="hist-titles">Histórico de Ganhos</h2>
+               <hr>
+               <div class="gains-list">
+               </div>
+            </section>
+
+            <section class="expenses-history">
+               <h2 class="hist-titles">Histórico de Despesas</h2>
+               <hr>
+               <div class="expenses-list">
+               </div>
+            </section>
+         </section>
+         <section class="totals">
+            <div class="gains-totals">
+               <h2>Total de Ganhos:</h2>
+               <h1 class="gns-sumary">R$ 0</h1>
+               <p class="gns-lastRegistry">Última modificação:</p>
+            </div>
+            <div class="expenses-totals">
+               <h2>Total de Despesas:</h2>
+               <h1 class="exp-sumary">R$ 0</h1>
+               <p class="exp-lastRegistry">Última modificação:</p>
+            </div>
+            <button class="newRegister">Novo Registro</button>
+         </section>
+      </div>
+   </section>
+</body>
+
+</html>
